@@ -53,12 +53,12 @@ fun ItemStudent(
         Column(
             modifier = Modifier
         ) {
-            Text(
-                text = "Dia chi: ${student.address}", style = TextStyle(
-                    color = Color.Green
-                )
-            )
-            Spacer(modifier = Modifier.height(5.dp))
+//            Text(
+//                text = "Dia chi: ${student.address}", style = TextStyle(
+//                    color = Color.Green
+//                )
+//            )
+//            Spacer(modifier = Modifier.height(5.dp))
             Text(
                 text = "Gioi tinh: ${student.gender}", style = TextStyle(
                     color = Color.Yellow

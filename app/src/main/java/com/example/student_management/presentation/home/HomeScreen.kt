@@ -62,14 +62,14 @@ fun HomeScreen(
             isAge = true
         )
         Spacer(modifier = Modifier.height(7.dp))
-        InputText(
-            text = address,
-            onValueChange = { viewModel.onAddressChange(it) },
-            placeHolder = "Nhap dia chi",
-            modifier = Modifier.padding(horizontal = 25.dp),
-            isAge = false
-        )
-        Spacer(modifier = Modifier.height(15.dp))
+//        InputText(
+//            text = address,
+//            onValueChange = { viewModel.onAddressChange(it) },
+//            placeHolder = "Nhap dia chi",
+//            modifier = Modifier.padding(horizontal = 25.dp),
+//            isAge = false
+//        )
+//        Spacer(modifier = Modifier.height(15.dp))
         InputText(
             text = gender,
             onValueChange = { viewModel.onGenderChange(it) },

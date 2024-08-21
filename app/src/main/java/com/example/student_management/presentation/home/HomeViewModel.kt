@@ -50,7 +50,7 @@ class HomeViewModel @Inject constructor(
                 Student(
                     name = _name.value,
                     age = _age.value,
-                    address = _address.value,
+//                    address = _address.value,
                     gender = _gender.value
                 )
             )
