@@ -35,6 +35,7 @@ fun HomeScreen(
     val name by viewModel.name
     val age by viewModel.age
     val address by viewModel.address
+    val gender by viewModel.gender
 
     val context = LocalContext.current
     Column(
@@ -65,6 +66,14 @@ fun HomeScreen(
             text = address,
             onValueChange = { viewModel.onAddressChange(it) },
             placeHolder = "Nhap dia chi",
+            modifier = Modifier.padding(horizontal = 25.dp),
+            isAge = false
+        )
+        Spacer(modifier = Modifier.height(15.dp))
+        InputText(
+            text = gender,
+            onValueChange = { viewModel.onGenderChange(it) },
+            placeHolder = "Nhap gioi tinh",
             modifier = Modifier.padding(horizontal = 25.dp),
             isAge = false
         )

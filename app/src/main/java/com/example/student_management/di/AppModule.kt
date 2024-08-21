@@ -5,6 +5,7 @@ import androidx.room.Room
 import com.example.student_management.data.repository.StudentRepositoryImpl
 import com.example.student_management.domain.local.StudentDAO
 import com.example.student_management.domain.local.StudentDatabase
+import com.example.student_management.domain.model.MIGRATION_1_2
 import com.example.student_management.domain.repository.StudentRepository
 import com.example.student_management.helper.Constant
 import dagger.Module
@@ -26,7 +27,8 @@ object AppModule {
             context = application,
             klass = StudentDatabase::class.java,
             name = Constant.DATABASE_NAME
-        ).fallbackToDestructiveMigration()
+        )
+            .addMigrations(MIGRATION_1_2)
             .build()
     }
 

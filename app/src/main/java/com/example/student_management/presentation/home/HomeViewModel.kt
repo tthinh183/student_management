@@ -25,6 +25,9 @@ class HomeViewModel @Inject constructor(
     private val _address = mutableStateOf("")
     val address: State<String> = _address
 
+    private val _gender = mutableStateOf("")
+    val gender: State<String> = _gender
+
     fun onNameChange(name: String) {
         _name.value = name
     }
@@ -37,18 +40,24 @@ class HomeViewModel @Inject constructor(
         _address.value = address
     }
 
+    fun onGenderChange(gender: String) {
+        _gender.value = gender
+    }
+
     fun insertStudent() {
         viewModelScope.launch {
             studentRepository.insertStudent(
                 Student(
                     name = _name.value,
                     age = _age.value,
-                    address = _address.value
+                    address = _address.value,
+                    gender = _gender.value
                 )
             )
         }
         _name.value = ""
         _age.value = 0
         _address.value = ""
+        _gender.value = ""
     }
 }
